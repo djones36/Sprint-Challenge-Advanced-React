@@ -1,5 +1,4 @@
 import React from "react";
-// import ReactDOM from 'react-dom';
 import { render, getByAltText, getByText } from "@testing-library/react";
 import App from "./App";
 import Header from "./components/Header";
