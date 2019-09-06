@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
-
+import Players from "./components/Players";
 class App extends React.Component {
   constructor() {
     super();
@@ -24,6 +24,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Worlds Top Soccer Players!</h1>
+        <Player value={this.state.players} />
       </div>
     );
   }
