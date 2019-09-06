@@ -1,15 +1,16 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
-
-const Cards = props => (
-  <Card>
-    <Card.Content>
-      <Card.Header>{props.value.name}</Card.Header>
-      <Card.Meta>{props.value.country}</Card.Meta>
-      <Card.Meta>{props.value.searches}</Card.Meta>
-      <Card.Description>Soccer Player</Card.Description>
-    </Card.Content>
-  </Card>
+// import "semantic-ui-css/semantic.min.css";
+const CardExampleHeaderCard = props => (
+  <Card.Group>
+    <Card>
+      <Card.Content>
+        <Card.Header>{props.value.name}s</Card.Header>
+        <Card.Meta>{props.value.country}</Card.Meta>
+        <Card.Description>Searches: {props.value.searches}</Card.Description>
+      </Card.Content>
+    </Card>
+  </Card.Group>
 );
 
-export default Cards;
+export default CardExampleHeaderCard;

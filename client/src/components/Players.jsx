@@ -1,12 +1,14 @@
 import React from "react";
-import Cards from "./Card";
-
+import CardExampleHeaderCard from "./Card";
+import { Card } from "semantic-ui-react";
 const Players = props => {
   return (
     <div className="player-wrapper">
-      {props.players.map(data => (
-        <Cards value={data} />
-      ))}
+      <Card.Group>
+        {props.players.map(data => (
+          <CardExampleHeaderCard value={data} key={data.id} />
+        ))}
+      </Card.Group>
     </div>
   );
 };
