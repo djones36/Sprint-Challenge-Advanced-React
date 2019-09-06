@@ -3,8 +3,8 @@ import { render, getByAltText, getByText } from "@testing-library/react";
 import App from "./App";
 import Header from "./components/Header";
 
-test("App renders", () => {
-  render(<App />);
+test("App renders", async () => {
+  await render(<App />);
 });
 
 test("Header renders", () => {
