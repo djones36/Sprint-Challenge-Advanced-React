@@ -14,7 +14,7 @@ class App extends React.Component {
       .get("http://localhost:5000/api/players")
       .then(res => {
         console.log("player ", res.data);
-        this.ListeningStateChangedEvent({ players: res.data });
+        this.setState({ players: res.data });
       })
       .catch(err => {
         console.log("error", err);
@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Worlds Top Soccer Players!</h1>
-        <Player value={this.state.players} />
+        <Players players={this.state.players} />
       </div>
     );
   }
