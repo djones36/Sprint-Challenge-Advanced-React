@@ -1,9 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+// import ReactDOM from 'react-dom';
+import { render, getByAltText, getByText } from "@testing-library/react";
+import App from "./App";
+import Header from "./components/Header";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test("App renders", () => {
+  render(<App />);
+});
+
+test("Header renders", () => {
+  render(<Header />);
+});
+
+test("contains header text", () => {
+  const { getByText } = render(<Header />);
+  getByText(/Worlds Top Soccer Players/i);
+});
+
+test("toggle renders", () => {
+  render(<dark-mode__toggle />);
 });
